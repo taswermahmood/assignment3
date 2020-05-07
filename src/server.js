@@ -14,17 +14,17 @@ app.get('/api/v1/cities', function(req, res) {
         port: '32000',
         user: 'root',
         password: 'root',
-        database: 'citiesData'
+        database: 'denirodb'
     });
     connection.connect();
 
-    connection.query('SELECT * FROM tblCitiesImport', function (err, rows, fields) {
+    connection.query('SELECT * FROM deniro', function (err, rows, fields) {
         if (err) throw err;
+        console.log(rows);
         res.json({ "data": rows});
     })
 
     connection.end()
-
 
 });
 

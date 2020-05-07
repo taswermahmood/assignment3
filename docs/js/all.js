@@ -1,15 +1,10 @@
 (function ($) {
-    $('#citiesTable').DataTable( {
+    $('#deniro').DataTable( {
         "ajax": "http://localhost:9080/api/v1/cities",
         "columns": [
-            { "data": "id" },
-            { "data": "fldName" },
-            { "data": "fldLat" },
-            { "data": "fldLong" },
-            { "data": "fldCountry" },
-            { "data": "fldAbbreviation" },
-            { "data": "fldCapitalStatus" },
-            { "data": "fldPopulation" }
+            { "data": "Year" },
+            { "data": "Score" },
+            { "data": "Title" }
 
         ]
     } );
